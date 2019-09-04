@@ -5,6 +5,7 @@
   "main": "dist/<%kebabCaseName%>.ssr.js",
   "module": "dist/<%kebabCaseName%>.esm.js",
   "unpkg": "dist/<%kebabCaseName%>.min.js",
+  "licence": "MIT",
   "files": [
     "dist/*",
     "src/**/*.vue"
