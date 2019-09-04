@@ -1,6 +1,6 @@
 const fs = require('fs')
 
-const CHOICES = fs.readdirSync(`${__dirname}/../templates`)
+const CHOICES = fs.readdirSync(`${__dirname}/../templates`).filter(name => !name.startsWith('.'))
 
 const QUESTIONS = [
   {
