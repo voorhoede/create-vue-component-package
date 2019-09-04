@@ -7,7 +7,7 @@
 ## Installation
 
 ```
-npm install </<%kebabCaseName%>>
+npm install <%kebabCaseName%>
 ```
 
 ## Examples
