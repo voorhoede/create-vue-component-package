@@ -10,6 +10,7 @@
     "case-it": "^1.0.1",
     "inquirer": "^7.0.0",
     "plop": "^2.4.0",
+    "recursive-copy": "^2.0.10",
     "renamer": "^1.1.3",
     "replace-in-file": "^4.1.3"
   }
