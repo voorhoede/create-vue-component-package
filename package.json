@@ -1,0 +1,19 @@
+{
+  "name": "vue-comp-template",
+  "version": "1.0.0",
+  "description": "",
+  "bin": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "case-it": "^1.0.1",
+    "inquirer": "^7.0.0",
+    "plop": "^2.4.0",
+    "renamer": "^1.1.3",
+    "replace-in-file": "^4.1.3",
+    "replace-in-files": "^2.0.3"
+  }
+}
