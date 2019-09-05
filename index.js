@@ -9,12 +9,12 @@ const replaceProjectName = require('./lib/replace-project-name')
 inquirer.prompt(QUESTIONS)
   .then(answers => {
     const projectChoice = answers['project-choice']
-    const projectName = answers['project-name']
+    const componentName = answers['component-name']
     const src = `${__dirname}/templates/${projectChoice}`
-    const dest = `${CURR_DIR}/${projectName}`
+    const dest = `${CURR_DIR}/${componentName}`
   
     copy(src, dest)
       .then(() => {
-        replaceProjectName(projectName)
+        replaceProjectName(componentName)
       })
   });
