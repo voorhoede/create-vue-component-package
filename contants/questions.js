@@ -4,9 +4,9 @@ const CHOICES = fs.readdirSync(`${__dirname}/../templates`).filter(name => !name
 
 const QUESTIONS = [
   {
-    name: 'project-choice',
+    name: 'template-choice',
     type: 'list',
-    message: 'What project template would you like to generate?',
+    message: 'What template would you like to generate?',
     choices: CHOICES
   },
   {
