@@ -5,12 +5,15 @@ module.exports = {
     description: pkg.description,
     dest: `dist/`,
     themeConfig: {
-        search: false
+        search: false,
+        navbar: false
     },
     plugins: [
         ['@vuepress/register-components', {
             componentsDir: `${__dirname}/../../src/`
         }],
-        ['demo-code', {}]
+        ['demo-code', {
+            onlineBtns: { codepen: false, jsfiddle: false, codesandbox: false },
+        }]
     ]
 }
