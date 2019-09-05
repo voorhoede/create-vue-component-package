@@ -4,6 +4,7 @@ This package can be used to quickly generate the base for your component to be p
 
 * Rollup to transpile for ESM, SSR and UNPKG
 * Vuepress for documentation
+* Automated API documentation generation with [vuedoc.md](https://www.npmjs.com/package/@vuedoc/md)
 
 ## Usage
 
