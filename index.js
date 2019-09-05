@@ -8,9 +8,9 @@ const replaceProjectName = require('./lib/replace-project-name')
 
 inquirer.prompt(QUESTIONS)
   .then(answers => {
-    const projectChoice = answers['project-choice']
+    const templateChoice = answers['template-choice']
     const componentName = answers['component-name']
-    const src = `${__dirname}/templates/${projectChoice}`
+    const src = `${__dirname}/templates/${templateChoice}`
     const dest = `${CURR_DIR}/${componentName}`
   
     copy(src, dest)
