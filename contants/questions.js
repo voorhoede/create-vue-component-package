@@ -10,12 +10,12 @@ const QUESTIONS = [
     choices: CHOICES
   },
   {
-    name: 'project-name',
+    name: 'component-name',
     type: 'input',
-    message: 'Project name:',
+    message: 'Component name:',
     validate: function (input) {
       if (/^([A-Za-z\-\_\d])+$/.test(input)) return true;
-      else return 'Project name may only include letters, numbers, underscores and hashes.';
+      else return 'Component name may only include letters, numbers, underscores and hashes.';
     }
   }
 ];
