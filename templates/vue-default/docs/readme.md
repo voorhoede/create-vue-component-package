@@ -1,9 +1,5 @@
 # <%kebabCaseName%>
 
-## Getting started
-
-...
-
 ## Installation
 
 ```
@@ -15,3 +11,7 @@ npm install <%kebabCaseName%>
 ::: demo
 <<%kebabCaseName%>></<%kebabCaseName%>>
 :::
+
+<!-- The API section is auto generated, don't touch please -->
+
+## API

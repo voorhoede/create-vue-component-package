@@ -14,13 +14,16 @@
     "prebuild": "rm -rf dist/",
     "build": "run-s build:*",
     "build:component": "NODE_ENV=production rollup --c rollup.config.js",
+    "build:api-docs": "vuedoc.md src/<%kebabCaseName%>.vue --section 'API' --output docs/readme.md",
     "build:docs": "vuepress build docs",
+    "predev": "npm run build:api-docs",
     "dev": "vuepress dev docs --open",
     "test": "jest src/*",
     "watch:test": "npm test -- --watch"
   },
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.29",
+    "@vuedoc/md": "^1.6.0",
     "@vuepress/plugin-register-components": "^1.0.0-rc.1",
     "babel-core": "^6.26.3",
     "babel-jest": "^24.9.0",
