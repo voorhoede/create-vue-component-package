@@ -14,6 +14,10 @@ Run the following command in your terminal to initialize:
 npm init vue-component-package
 ```
 
+## Publishing
+
+During the initialisation there is one step that asks 'Do you want to add a GitHub action for publishing to npm'. To make this work you need to [set a secret](https://help.github.com/en/articles/virtual-environments-for-github-actions#creating-and-using-secrets-encrypted-variables) in your GitHub repo settings called `NPM_AUTH_TOKEN` containing your [npm token](https://docs.npmjs.com/creating-and-viewing-authentication-tokens). Now when you push a new tag to github, the new version will be published to npm.
+
 ## Roadmap
 
 * [ ] add support for component/directive/...

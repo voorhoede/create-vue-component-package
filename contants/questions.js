@@ -17,7 +17,13 @@ const QUESTIONS = [
       if (/^([A-Za-z\-\_\d])+$/.test(input)) return true;
       else return 'Component name may only include letters, numbers, underscores and hashes.';
     }
-  }
+  },
+  {
+    name: 'github-action-publishing',
+    type: 'confirm',
+    default: false,
+    message: `Do you want to add a GitHub action for publishing to npm? (read docs section 'publishing' for instructions)`
+  },
 ];
 
 module.exports = QUESTIONS

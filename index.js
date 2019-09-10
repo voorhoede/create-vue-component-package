@@ -10,10 +10,19 @@ inquirer.prompt(QUESTIONS)
   .then(answers => {
     const templateChoice = answers['template-choice']
     const componentName = answers['component-name']
-    const src = `${__dirname}/templates/${templateChoice}`
-    const dest = `${CURR_DIR}/${componentName}`
+    const githubActionPublishing = answers['github-action-publishing']
+
+    const filter = [
+      '**/*',
+      githubActionPublishing ? false : '!.github'
+    ].filter(value => value)
+
+    const options = {
+      filter,
+      dot: true
+    }
   
-    copy(src, dest)
+    copy(`${__dirname}/templates/${templateChoice}`, `${CURR_DIR}/${componentName}`, { options })
       .then(() => {
         replaceProjectName(componentName)
       })
