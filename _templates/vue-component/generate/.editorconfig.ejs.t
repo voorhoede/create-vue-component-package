@@ -1,3 +1,6 @@
+---
+to: <%=name%>/.editorconfig
+---
 # editorconfig.org
 root = true
 

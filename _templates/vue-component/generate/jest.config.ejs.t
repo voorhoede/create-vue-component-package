@@ -1,3 +1,6 @@
+---
+to: <%=name%>/jest.config.js
+---
 module.exports = {
   "moduleFileExtensions": [
     "js",

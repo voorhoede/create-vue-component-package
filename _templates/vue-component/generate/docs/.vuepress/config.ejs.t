@@ -1,3 +1,7 @@
+---
+to: <%=name%>/docs/.vuepress/config.js
+---
+
 const pkg = require('../../package.json')
 
 module.exports = {

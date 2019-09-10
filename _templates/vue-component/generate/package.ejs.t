@@ -1,10 +1,13 @@
+---
+to: <%=name%>/package.json
+---
 {
-  "name": "<%kebabCaseName%>",
+  "name": "<%=name%>",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/<%kebabCaseName%>.ssr.js",
-  "module": "dist/<%kebabCaseName%>.esm.js",
-  "unpkg": "dist/<%kebabCaseName%>.min.js",
+  "main": "dist/<%= h.kebabName(name) %>.ssr.js",
+  "module": "dist/<%= h.kebabName(name) %>.esm.js",
+  "unpkg": "dist/<%= h.kebabName(name) %>.min.js",
   "licence": "MIT",
   "files": [
     "dist/*",
@@ -14,7 +17,7 @@
     "prebuild": "rm -rf dist/",
     "build": "NODE_ENV=production rollup --c rollup.config.js",
     "docs": "run-s docs:*",
-    "docs:api": "vuedoc.md src/<%kebabCaseName%> --section 'API' --output docs/readme.md",
+    "docs:api": "vuedoc.md src/<%= h.kebabName(name) %> --section 'API' --output docs/readme.md",
     "docs:vuepress": "vuepress build docs",
     "predev": "npm run build:api-docs",
     "dev": "vuepress dev docs --open",
@@ -37,6 +40,7 @@
     "rollup": "^1.12.1",
     "rollup-plugin-buble": "^0.19.6",
     "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-replace": "^2.2.0",
     "rollup-plugin-terser": "^4.0.4",
     "rollup-plugin-vue": "^5.0.0",

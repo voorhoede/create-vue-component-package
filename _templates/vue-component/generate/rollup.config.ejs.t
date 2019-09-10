@@ -1,9 +1,13 @@
+---
+to: <%=name%>/rollup.config.js
+---
 // rollup.config.js
 import vue from 'rollup-plugin-vue';
 import buble from 'rollup-plugin-buble';
 import commonjs from 'rollup-plugin-commonjs';
 import replace from 'rollup-plugin-replace';
 import { terser } from 'rollup-plugin-terser';
+import resolve from 'rollup-plugin-node-resolve';
 import minimist from 'minimist';
 import pkg from './package.json';
 
@@ -11,6 +15,7 @@ const argv = minimist(process.argv.slice(2));
 
 const baseConfig = {
   input: 'src/index.js',
+  external: ['query-string'],
   plugins: {
     preVue: [
       replace({
@@ -25,7 +30,11 @@ const baseConfig = {
       },
     },
     postVue: [
-      buble(),
+      buble({ 
+        transforms: {
+          dangerousForOf: true
+        }
+      }),
     ],
   },
 };
@@ -50,6 +59,7 @@ if (!argv.format || argv.format === 'es') {
       file: pkg.module,
       format: 'esm',
       exports: 'named',
+      sourcemap: true,
     },
     plugins: [
       ...baseConfig.plugins.preVue,
@@ -60,6 +70,7 @@ if (!argv.format || argv.format === 'es') {
           ecma: 6,
         },
       }),
+      resolve()
     ],
   };
   buildFormats.push(esConfig);
@@ -73,8 +84,9 @@ if (!argv.format || argv.format === 'cjs') {
       compact: true,
       file: pkg.main,
       format: 'cjs',
-      name: 'FixedRatio',
+      name: 'VueDatoImage',
       exports: 'named',
+      sourcemap: true,
       globals,
     },
     plugins: [
@@ -87,6 +99,7 @@ if (!argv.format || argv.format === 'cjs') {
         },
       }),
       ...baseConfig.plugins.postVue,
+      resolve()
     ],
   };
   buildFormats.push(umdConfig);
@@ -100,8 +113,9 @@ if (!argv.format || argv.format === 'iife') {
       compact: true,
       file: pkg.unpkg,
       format: 'iife',
-      name: 'FixedRatio',
+      name: 'VueDatoImage',
       exports: 'named',
+      sourcemap: true,
       globals,
     },
     plugins: [
@@ -113,6 +127,7 @@ if (!argv.format || argv.format === 'iife') {
           ecma: 5,
         },
       }),
+      resolve()
     ],
   };
   buildFormats.push(unpkgConfig);

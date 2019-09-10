@@ -1,11 +1,15 @@
+---
+to: <%=name%>/src/index.js
+---
+
 // Import vue component
-import component from './<%kebabCaseName%>.vue';
+import component from './<%=h.kebabName(name)%>.vue';
 
 // install function executed by Vue.use()
 function install(Vue) {
   if (install.installed) return;
   install.installed = true;
-  Vue.component('<%pascalCaseName%>', component);
+  Vue.component('<%=h.pascalName(name)%>', component);
 }
 
 // Create module definition for Vue.use()
