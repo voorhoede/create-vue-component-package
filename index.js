@@ -5,13 +5,12 @@ const Logger = require('hygen/lib/logger')
 const path = require('path')
 const inquirer = require('inquirer');
 const QUESTIONS = require('./constants/questions')
-const defaultTemplates = path.join(process.cwd(), 'templates')
+const defaultTemplates = path.join(process.cwd(), '_templates')
 
 inquirer.prompt(QUESTIONS)
   .then(answers => {
     const templateChoice = answers['template-choice']
     const componentName = answers['component-name']
-    const githubActionPublishing = answers['github-action-publishing']
     
     runner([templateChoice, 'generate', componentName], {
       templates: defaultTemplates,
