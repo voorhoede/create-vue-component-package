@@ -22,7 +22,8 @@ to: <%=name%>/package.json
     "predev": "npm run docs:api",
     "dev": "vuepress dev docs --open",
     "test": "jest src/*",
-    "watch:test": "npm test -- --watch"
+    "watch:test": "npm test -- --watch",
+    "lint": "eslint 'src/**/*.{js,vue}'"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -34,6 +35,10 @@ to: <%=name%>/package.json
     "babel-jest": "^24.9.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-vue": "^2.0.2",
+    "eslint": "^6.3.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-vue": "^5.2.3",
     "jest": "^24.9.0",
     "minimist": "^1.2.0",
     "npm-run-all": "^4.1.5",

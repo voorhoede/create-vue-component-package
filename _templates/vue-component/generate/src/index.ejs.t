@@ -18,7 +18,6 @@ const plugin = {
 };
 
 // To auto-install when vue is found
-/* global window global */
 let GlobalVue = null;
 if (typeof window !== 'undefined') {
   GlobalVue = window.Vue;
