@@ -1,0 +1,4 @@
+---
+to: <%=name%>/docs/.vuepress/public/_redirects
+---
+/*    /index.html   200
