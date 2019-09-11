@@ -17,7 +17,7 @@ to: <%=name%>/package.json
     "prebuild": "rm -rf dist/",
     "build": "NODE_ENV=production rollup --c rollup.config.js",
     "docs": "run-s docs:*",
-    "docs:api": "vuedoc.md src/<%= h.kebabName(name) %> --section 'API' --output docs/readme.md",
+    "docs:api": "vuedoc.md src/<%= h.kebabName(name) %> --section 'API' --output docs/readme.md --ignore-data --ignore-methods --ignore-computed",
     "docs:vuepress": "vuepress build docs",
     "predev": "npm run docs:api",
     "dev": "vuepress dev docs --open",
