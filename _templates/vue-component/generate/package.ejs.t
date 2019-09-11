@@ -19,7 +19,7 @@ to: <%=name%>/package.json
     "docs": "run-s docs:*",
     "docs:api": "vuedoc.md src/<%= h.kebabName(name) %> --section 'API' --output docs/readme.md",
     "docs:vuepress": "vuepress build docs",
-    "predev": "npm run build:api-docs",
+    "predev": "npm run docs:api",
     "dev": "vuepress dev docs --open",
     "test": "jest src/*",
     "watch:test": "npm test -- --watch"
