@@ -3,9 +3,10 @@
 const { runner } = require('hygen')
 const Logger = require('hygen/lib/logger')
 const path = require('path')
+const fs = require('fs')
 const inquirer = require('inquirer');
 const QUESTIONS = require('./constants/questions')
-const defaultTemplates = path.join(process.cwd(), '_templates')
+const defaultTemplates = `${__dirname}/_templates`
 
 inquirer.prompt(QUESTIONS)
   .then(answers => {

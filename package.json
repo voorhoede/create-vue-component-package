@@ -6,6 +6,12 @@
   "author": "sjoerdbeentjes<sjoerd@voorhoede.nl>",
   "repository": "https://github.com/voorhoede/create-vue-component-package",
   "license": "MIT",
+  "files": [
+    "_templates/**/*",
+    "index.js",
+    ".hygen.js",
+    "constants/**/*"
+  ],
   "dependencies": {
     "case-it": "^1.0.1",
     "hygen": "^4.0.9",
