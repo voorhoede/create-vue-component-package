@@ -22,6 +22,5 @@ During the initialisation there is one step that asks 'Do you want to add a GitH
 
 * [ ] add support for component/directive/...
 * [ ] add TypeScript support
-* [ ] add test setup
 * [ ] add style bundling (postcss > legacy + modern?)
 * [ ] add version support (simple docs/v1/?) and configure [VuePress search by version](https://v1.vuepress.vuejs.org/plugin/official/plugin-search.html#options)
