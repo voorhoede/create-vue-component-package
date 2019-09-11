@@ -1,7 +1,6 @@
 ---
 to: "<%= publishing ? name + '/.github/workflows/npm.yml' : null %>"
 ---
-
 on:
   push:
     tags: v*.*.*

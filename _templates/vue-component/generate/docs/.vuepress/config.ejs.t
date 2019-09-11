@@ -1,7 +1,6 @@
 ---
 to: <%=name%>/docs/.vuepress/config.js
 ---
-
 const pkg = require('../../package.json')
 
 module.exports = {
@@ -10,7 +9,9 @@ module.exports = {
     dest: `www`,
     themeConfig: {
         search: false,
-        navbar: false
+        nav: [
+            { text: 'v1', link: '/' }
+        ]
     },
     plugins: [
         ['@vuepress/register-components', {

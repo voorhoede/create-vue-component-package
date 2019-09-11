@@ -1,10 +1,7 @@
 ---
-to: <%=name%>/docs/readme.md
+to: <%=name%>/docs/v1/readme.md
 ---
-
 # <%=name%>
-
-[![npm version](https://img.shields.io/npm/v/<%=name%>)](https://www.npmjs.com/package/<%=name%>)
 
 ## Installation
 
