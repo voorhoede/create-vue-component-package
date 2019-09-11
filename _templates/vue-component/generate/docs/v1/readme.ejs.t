@@ -3,6 +3,8 @@ to: <%=name%>/docs/v1/readme.md
 ---
 # <%=name%>
 
+[[toc]]
+
 ## Installation
 
 ```
