@@ -1,6 +1,6 @@
 {
   "name": "create-vue-component-package",
-  "version": "1.4.6",
+  "version": "1.4.7",
   "description": "A scaffolding tool to quickly generate NPM packages for vue components",
   "bin": "index.js",
   "author": "sjoerdbeentjes<sjoerd@voorhoede.nl>",
